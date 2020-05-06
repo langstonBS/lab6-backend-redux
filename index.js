@@ -11,8 +11,12 @@ const app = express();
 
 app.use(cors());
 
-app.get('/', (req, res) => {
-    res.json({ hellow: 'world' });
+app.get('/location', (req, res) => {
+    res.json({ hellow: 'location' });
+});
+
+app.get('/weather', (req, res) => {
+    res.json({ hellow: 'wether' });
 });
 
 app.listen(PORT, () => console.log(`running on port ${PORT}`));
